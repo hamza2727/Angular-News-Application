@@ -43,6 +43,14 @@ export class DashboardComponent implements OnInit {
   Description4: any;
   Content4: any;
 
+  comments: string = '';
+  name: string = '';
+
+  email: string = '';
+  email1: string = '';
+  email2: string = '';
+  email3: string = '';
+  email4: string = '';
 
 
 
@@ -64,7 +72,6 @@ export class DashboardComponent implements OnInit {
     this.topHeadlines();
     this.everything();
     this.sources();
-
     this.dataService.currentMessage.subscribe(message => this.headList = message);
 
 
@@ -85,7 +92,17 @@ export class DashboardComponent implements OnInit {
       1);
 
   }
+  LeaveResponse() {
+    debugger;
+    this.name = '';
+    this.comments = '';
+    this.email = '';
+    this.email1 = '';
+    this.email2 = '';
+    this.email3 = '';
+    this.email4= '';
 
+  }
 
   // Method to get Top Headlines from the news api 
   topHeadlines() {

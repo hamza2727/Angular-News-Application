@@ -23,8 +23,7 @@
         <div class="leftcolumn">
             <div class="card">
 
-                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()"> <img src="{{imageUrl}}"
-                        height="200" width="850" alt="" /></div>
+                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()"> <img src="{{imageUrl}}" height="200" width="850" alt="" /></div>
 
                 <h2 (click)="getTheBbcNews()">{{title}}</h2>
                 <h5 (click)="getTheBbcNews()">{{Description}}</h5>
@@ -32,8 +31,7 @@
             </div>
             <div class="card">
 
-                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()"> <img src="{{imageUrl3}}"
-                        height="200" width="850" alt="" /></div>
+                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()"> <img src="{{imageUrl3}}" height="200" width="850" alt="" /></div>
 
                 <h2 (click)="getTheBbcNews()">{{title3}}</h2>
                 <h5 (click)="getTheBbcNews()">{{Description3}}</h5>
@@ -41,8 +39,7 @@
             </div>
             <div class="card">
 
-                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNewsForSecond()"> <img src="{{imageUrl2}}"
-                        height="200" width="850" alt="" /></div>
+                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNewsForSecond()"> <img src="{{imageUrl2}}" height="200" width="850" alt="" /></div>
 
                 <h2 (click)="getTheBbcNewsForSecond()">{{title2}}</h2>
                 <h5 (click)="getTheBbcNewsForSecond()">{{Description2}}</h5>
@@ -59,7 +56,7 @@
         <div class="rightcolumn">
 
 
-            <div class="card" style=" max-height:300px;overflow-y:scroll;">
+            <div class="card " style=" max-height:300px;overflow-y:scroll;">
                 <h3 class="newsletter1" style="border-bottom:2px solid lightgrey; ">Recent Event</h3>
                 <ul class="latestnews">
                     <li (click)="getTheBbcNews()"><img src="{{imageUrl}}" height="50" width="50" alt="" />
@@ -111,11 +108,9 @@
 
             <div class="card">
                 <h3 class="newsletter1" style="border-bottom:2px solid lightgrey; ">Newsletter</h3>
-                <p style="font-size: 13px; padding: 10px;">
-                    Ipsam eius id quaerat</p>
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; padding: 5px; margin-bottom: 10px;">
-                <button class="btn_news">Subscribe</button>
+                <p style="font-size: 13px; padding: 10px;">Your email address will not be published. Required fields are marked</p>
+                <input [(ngModel)]="email" type="text" name="email1" id="email" placeholder="Your Email" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+                <button (click)="LeaveResponse()" class="btn_news">Subscribe</button>
             </div>
 
         </div>
@@ -137,12 +132,16 @@
             height: 40%;
             float: left;
         ">
-                <h2></h2>
 
-                <li><img src="images/demo/190x130.gif" alt="" />
-                    <p></p>
-                    <p></p>
-                    <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+
+                <li><img src="{{imageUrl4}}" height="270" width="400" style="
+                    margin-top: -40px;
+                    margin-left: -20px;
+                    /* padding: 0px; */
+                " alt="" />
+                    <p><strong><a style="color: black;" (click)="getTheBbcNewsForFourth()" href="#">{{title4}}
+                        </a></strong><br>{{Description4}} <strong></strong></p>
+
                 </li>
             </div>
 
@@ -153,24 +152,30 @@
         ">
                 <h2></h2>
 
-                <li><img src="images/demo/190x130.gif" alt="" />
-                    <p></p>
-                    <p></p>
-                    <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                <li><img src="{{imageUrl3}}" height="270" width="400" style="
+                    margin-top: -60px;
+                    margin-left: -20px;
+                   
+                    /* padding: 0px; */
+                " alt="" />
+                    <p><strong><a style="color: black;" (click)="getTheBbcNewsForThird()" href="#">{{title3}}
+                        </a></strong><br>{{Description3}} <strong></strong></p>
+
                 </li>
             </div>
 
 
 
             <div class="card" style="float: left;width: 100%;">
-                <h2>Leave a Response</h2>
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; height: 100px; padding: 5px; margin-bottom: 10px;">
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; padding: 5px; margin-bottom: 10px;">
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; padding: 5px; margin-bottom: 10px;">
-                <button class="btn_news" style="width: 25%;">Subscribe</button>
+                <h2 style="text-align: center;">Leave a Response</h2>
+                <input type="text" [(ngModel)]="comments" placeholder="Write your Comment on this article...." style="width: 100%; height: 100px; padding: 5px; margin-bottom: 10px;">
+
+                <div class="row">
+                    <input type="text" [(ngModel)]="name" placeholder="Your Name" style="width: 45%;margin-left: 10px; padding: 5px; margin-bottom: 10px;">
+                    <input type="text" [(ngModel)]="email" placeholder="Your Email" style="width: 45%; padding: 5px;margin-left: 60px; margin-bottom: 10px;">
+                </div>
+
+                <button (click)="LeaveResponse()" class="btn_news" style="width: 25%;">Subscribe</button>
 
             </div>
         </div>
@@ -182,31 +187,25 @@
 
             <div class="card">
                 <h3 class="newsletter1" style="border-bottom:2px solid lightgrey; ">Newsletter</h3>
-                <p style="font-size: 13px; padding: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsam eius id quaerat</p>
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; padding: 5px; margin-bottom: 10px;">
-                <button class="btn_news">Subscribe</button>
+                <p style="font-size: 13px; padding: 10px;">Your email address will not be published. Required fields are marked</p>
+                <input type="text" [(ngModel)]="email2" name="email" id="email" placeholder="Your Email" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+                <button (click)="LeaveResponse()" class="btn_news">Subscribe</button>
             </div>
 
 
             <div class="card">
                 <h3 class="newsletter1" style="border-bottom:2px solid lightgrey; ">Newsletter</h3>
-                <p style="font-size: 13px; padding: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsam eius id quaerat</p>
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; padding: 5px; margin-bottom: 10px;">
-                <button class="btn_news">Subscribe</button>
+                <p style="font-size: 13px; padding: 10px;">Your email address will not be published. Required fields are marked</p>
+                <input type="text" [(ngModel)]="email3" name="email" id="email" placeholder="Your Email" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+                <button (click)="LeaveResponse()" class="btn_news">Subscribe</button>
             </div>
 
 
             <div class="card">
                 <h3 class="newsletter1" style="border-bottom:2px solid lightgrey; ">Newsletter</h3>
-                <p style="font-size: 13px; padding: 10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Ipsam eius id quaerat</p>
-                <input type="text" name="email" id="email" placeholder="Your Email"
-                    style="width: 100%; padding: 5px; margin-bottom: 10px;">
-                <button class="btn_news">Subscribe</button>
+                <p style="font-size: 13px; padding: 10px;">Your email address will not be published. Required fields are marked</p>
+                <input type="text" [(ngModel)]="email4" name="email" id="email" placeholder="Your Email" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+                <button (click)="LeaveResponse()" class="btn_news">Subscribe</button>
             </div>
 
         </div>

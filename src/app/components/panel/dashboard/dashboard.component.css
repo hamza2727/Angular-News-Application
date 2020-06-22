@@ -1,127 +1,219 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial;
     padding-left: 10%;
     padding-right: 10%;
     background: #f1f1f1;
-  }
-  
-  /* Header/Blog Title */
-  .header {
+}
+
+
+/* Header/Blog Title */
+
+.header {
     padding: 15px;
     text-align: center;
     background: white;
     border-bottom: solid 1px lightgray;
-  }
-  
-  .header h1 {
+}
+
+.header h1 {
     font-size: 25px;
-  }
+}
 
 
+/* Style the top navigation bar */
 
-  /* Style the top navigation bar */
-  .topnav {
+.topnav {
     overflow: hidden;
     background-color: white;
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
+}
+
+
+/* Style the topnav links */
+
+.topnav a {
     float: left;
     display: block;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
 
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
+
+/* Change color on hover */
+
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
 
-  
-  /* Create two unequal columns that floats next to each other */
-  /* Left column */
-  .leftcolumn {   
+
+/* Create two unequal columns that floats next to each other */
+
+
+/* Left column */
+
+.leftcolumn {
     float: left;
     width: 75%;
-  }
-  
-  /* Right column */
-  .rightcolumn {
+}
+
+
+/* Right column */
+
+.rightcolumn {
     float: left;
     width: 25%;
     background-color: #f1f1f1;
     padding-left: 20px;
     text-align: center;
-  }
-  
-  /* Fake image */
-  .fakeimg {
+}
+
+
+/* Fake image */
+
+.fakeimg {
     background-color: #aaa;
     width: 100%;
-  }
-  
-  /* Add a card effect for articles */
-  
-  .card {
+}
+
+
+/* Add a card effect for articles */
+
+.card {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Footer */
-  .footer {
+}
+
+
+/* Footer */
+
+.footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
     margin-top: 20px;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
-    }
-  }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .topnav a {
-      float: none;
-      width: 100%;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
     }
 }
 
 
-.latestnews{width:100%; margin:0; padding:0; list-style:none;}
-.latestnews li{width:100%; height:70px; margin:0; overflow:hidden;}
-.latestnews a, p, strong{font-size: 10px; text-align: left; color: black; text-decoration: none; line-height: 13px;}
-.latestnews img{float:left; height: 50px; width: 50px; margin:0 10px 0 0; padding:4px;}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 
-.newsletter li{border-bottom:1px dotted #C7C5C8; overflow:hidden;}
-.newsletter1 {padding-bottom: 20px;}
-.btn_news{color: white; background-color: orange; width: 100%; padding: 10px; border: none;}
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
 
+.latestnews {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-#hpage_latest{display:block; width:100%;}
-#hpage_latest ul{margin:0; padding:0; list-style:none; display:inline;}
-#hpage_latest li{display:block; float:left; width:200px; margin:0 15px 0 0; padding:0;}
-#hpage_latest li.last{margin-right:0;}
-#hpage_latest img{margin:0; padding:4px; border:1px solid #C7C5C8;}
-#hpage_latest .readmore{font-weight:bold; text-align:right;}.clear{clear:both;}
+.latestnews li {
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.latestnews a,
+p,
+strong {
+    font-size: 10px;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+    line-height: 13px;
+}
+
+.latestnews img {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px 0 0;
+    padding: 4px;
+}
+
+.newsletter li {
+    border-bottom: 1px dotted #C7C5C8;
+    overflow: hidden;
+}
+
+.newsletter1 {
+    padding-bottom: 20px;
+}
+
+.btn_news {
+    color: white;
+    background-color: orange;
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+#hpage_latest {
+    display: block;
+    width: 100%;
+}
+
+#hpage_latest ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+#hpage_latest li {
+    display: block;
+    float: left;
+    width: 200px;
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+
+#hpage_latest li.last {
+    margin-right: 0;
+}
+
+#hpage_latest img {
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #C7C5C8;
+}
+
+#hpage_latest .readmore {
+    font-weight: bold;
+    text-align: right;
+}
+
+.clear {
+    clear: both;
+}
