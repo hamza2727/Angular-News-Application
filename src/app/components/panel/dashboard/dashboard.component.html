@@ -1,8 +1,7 @@
-
 <html>
 
 <head>
-    
+
 </head>
 
 
@@ -24,7 +23,8 @@
         <div class="leftcolumn">
             <div class="card">
 
-                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()" > <img src="{{imageUrl}}"  height="200" width="850" alt="" /></div>
+                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()"> <img src="{{imageUrl}}"
+                        height="200" width="850" alt="" /></div>
 
                 <h2 (click)="getTheBbcNews()">{{title}}</h2>
                 <h5 (click)="getTheBbcNews()">{{Description}}</h5>
@@ -32,7 +32,8 @@
             </div>
             <div class="card">
 
-                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()" > <img src="{{imageUrl3}}"  height="200" width="850" alt="" /></div>
+                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNews()"> <img src="{{imageUrl3}}"
+                        height="200" width="850" alt="" /></div>
 
                 <h2 (click)="getTheBbcNews()">{{title3}}</h2>
                 <h5 (click)="getTheBbcNews()">{{Description3}}</h5>
@@ -40,7 +41,8 @@
             </div>
             <div class="card">
 
-                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNewsForSecond()" > <img src="{{imageUrl2}}"  height="200" width="850" alt="" /></div>
+                <div class="fakeimg" style="height:200px;" (click)="getTheBbcNewsForSecond()"> <img src="{{imageUrl2}}"
+                        height="200" width="850" alt="" /></div>
 
                 <h2 (click)="getTheBbcNewsForSecond()">{{title2}}</h2>
                 <h5 (click)="getTheBbcNewsForSecond()">{{Description2}}</h5>
@@ -48,57 +50,57 @@
             </div>
         </div>
 
-       
-        
-        
+
+
+
 
 
 
         <div class="rightcolumn">
 
 
-            <div class="card">
+            <div class="card" style=" max-height:300px;overflow-y:scroll;">
                 <h3 class="newsletter1" style="border-bottom:2px solid lightgrey; ">Recent Event</h3>
                 <ul class="latestnews">
-                    <li (click)="getTheBbcNews()"><img src="{{imageUrl}}"  height="50" width="50" alt="" />
+                    <li (click)="getTheBbcNews()"><img src="{{imageUrl}}" height="50" width="50" alt="" />
                         <p><strong><a (click)="getTheBbcNews()">{{title}} </a></strong><br></p>
                     </li>
 
-                    <li (click)="getTheBbcNewsForSecond()"><img src="{{imageUrl2}}"  height="50" width="50" alt="" />
-                        <p><strong><a (click)="getTheBbcNewsForSecond()"href="#">{{title2}}</a></strong><br></p>
+                    <li (click)="getTheBbcNewsForSecond()"><img src="{{imageUrl2}}" height="50" width="50" alt="" />
+                        <p><strong><a (click)="getTheBbcNewsForSecond()" href="#">{{title2}}</a></strong><br></p>
                     </li>
 
-                    <li (click)="getTheBbcNewsForThird()"><img src="{{imageUrl3}}"  height="50" width="50" alt="" />
-                        <p><strong><a (click)="getTheBbcNewsForThird()"href="#">{{title3}}</a></strong><br></p>
+                    <li (click)="getTheBbcNewsForThird()"><img src="{{imageUrl3}}" height="50" width="50" alt="" />
+                        <p><strong><a (click)="getTheBbcNewsForThird()" href="#">{{title3}}</a></strong><br></p>
                     </li>
-                    <li (click)="getTheBbcNewsForFourth()"><img src="{{imageUrl4}}"  height="50" width="50" alt="" />
-                        <p><strong><a (click)="getTheBbcNewsForFourth()"href="#">{{title4}}</a></strong><br></p>
+                    <li (click)="getTheBbcNewsForFourth()"><img src="{{imageUrl4}}" height="50" width="50" alt="" />
+                        <p><strong><a (click)="getTheBbcNewsForFourth()" href="#">{{title4}}</a></strong><br></p>
                     </li>
                 </ul>
             </div>
-            
+
 
 
             <div class="card">
                 <h3 class="newsletter1" style="border-bottom:3px solid orange; ">LATEST NEWS</h3>
                 <ul class="latestnews newsletter">
-                    <li  (click)="getTheBbcNewsForFourth()">
-                        <p><strong><a  (click)="getTheBbcNewsForFourth()" href="#">{{title4}}
+                    <li (click)="getTheBbcNewsForFourth()">
+                        <p><strong><a (click)="getTheBbcNewsForFourth()" href="#">{{title4}}
                                 </a></strong><br>{{Description4}} <strong></strong>10 Mints ago</p>
                     </li>
 
-                    <li  (click)="getTheBbcNews()">
-                        <p><strong><a  (click)="getTheBbcNews()" href="#">{{title}}
+                    <li (click)="getTheBbcNews()">
+                        <p><strong><a (click)="getTheBbcNews()" href="#">{{title}}
                                 </a></strong><br>{{Description}} <strong></strong>17 Mints ago</p>
                     </li>
 
-                    <li  (click)="getTheBbcNewsForThird()">
-                        <p><strong><a  (click)="getTheBbcNewsForThird()" href="#">{{title3}}
+                    <li (click)="getTheBbcNewsForThird()">
+                        <p><strong><a (click)="getTheBbcNewsForThird()" href="#">{{title3}}
                                 </a></strong><br>{{Description3}} <strong></strong>10 Mints ago</p>
                     </li>
 
-                    <li  (click)="getTheBbcNewsForSecond()">
-                        <p><strong><a  (click)="getTheBbcNewsForSecond()" href="#">{{title2}}
+                    <li (click)="getTheBbcNewsForSecond()">
+                        <p><strong><a (click)="getTheBbcNewsForSecond()" href="#">{{title2}}
                                 </a></strong><br>{{Description2}} <strong></strong>10 Mints ago</p>
                     </li>
                 </ul>
@@ -130,7 +132,11 @@
 
 
 
-            <div class="card">
+            <div class="card" style="
+            width: 45%;
+            height: 40%;
+            float: left;
+        ">
                 <h2></h2>
 
                 <li><img src="images/demo/190x130.gif" alt="" />
@@ -140,8 +146,12 @@
                 </li>
             </div>
 
-            <div class="card">
-                 <h2></h2>
+            <div class="card" style="
+            width: 45%;
+            height: 40%;
+            float: right;
+        ">
+                <h2></h2>
 
                 <li><img src="images/demo/190x130.gif" alt="" />
                     <p></p>
@@ -152,7 +162,7 @@
 
 
 
-            <div class="card">
+            <div class="card" style="float: left;width: 100%;">
                 <h2>Leave a Response</h2>
                 <input type="text" name="email" id="email" placeholder="Your Email"
                     style="width: 100%; height: 100px; padding: 5px; margin-bottom: 10px;">
