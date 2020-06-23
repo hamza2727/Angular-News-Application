@@ -28,11 +28,7 @@ postUser(user){
 // {
 //   return this.clientService.getVehicleDetails('/getvehicledetails',token);
 // }
-getVehicleDetails()
-{
-  debugger;
-  return this.clientService.getVehicleDetails('vehicle/getVehicleList');
-}
+
 loginUser(user){
   return this.clientService.postRequest('auth/login', user);
 }
